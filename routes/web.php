@@ -35,7 +35,9 @@ Route::get('/admin/index',[HomeController::class,'admin'])->name('admin');
 
 //Users
 Route::get('/admin/user/index',[UserController::class,'index'])->name('user.index');
-
+Route::get('/admin/user/edit/{id}',[UserController::class,'edit'])->name('user.edit');
+Route::post('/admin/user/update/{id}',[UserController::class,'update'])->name('user.update');
+Route::get('/admin/user/delete/{id}',[UserController::class,'delete'])->name('user.delete');
 
 //Category
 Route::get('/admin/Category/index',[CategoryController::class,'index'])->name('category.index');
